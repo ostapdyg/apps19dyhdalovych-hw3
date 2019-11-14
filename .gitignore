@@ -1,0 +1,7 @@
+
+.project
+.classpath
+target
+.settings
+SmartArray.iml
+nbproject/project.properties
