@@ -8,4 +8,14 @@ abstract class SmartArrayDecorator implements SmartArray {
         this.smartArray = smartArray;
     }
 
+    public Object[] toArray(){
+        return this.smartArray.toArray();
+    }
+    public String operationDescription(){
+        return this.smartArray.operationDescription();
+    }
+    public int size(){
+        return this.smartArray.size();
+    }
+
 }
