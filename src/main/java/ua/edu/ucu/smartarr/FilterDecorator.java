@@ -9,6 +9,7 @@ public class FilterDecorator extends SmartArrayDecorator {
 
     private MyPredicate predicate;
 
+
     public FilterDecorator(SmartArray arr, MyPredicate pr) {
         super(arr);
         this.predicate = pr;

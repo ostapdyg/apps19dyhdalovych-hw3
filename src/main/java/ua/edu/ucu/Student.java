@@ -38,11 +38,14 @@ class Student {
 
     @Override
     public boolean equals(Object other) {
+        if (!(other instanceof Student)) {
+            return false;
+        }
         Student st = ((Student) other);
-        return (this.getName() == st.getName()) 
-               && (this.getSurname() == st.getSurname())
-               && (this.getYear() == st.getYear()) 
-               && (this.getGPA() == st.getGPA());
+        return this.getName().equals(st.getName()) 
+            && this.getSurname().equals(st.getSurname())
+            && this.getYear() == st.getYear()
+            && Math.abs(this.getGPA()- st.getGPA()) < .0000001;
     }
 
     @Override
