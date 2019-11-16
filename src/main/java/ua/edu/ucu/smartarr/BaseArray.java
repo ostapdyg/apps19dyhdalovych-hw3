@@ -5,18 +5,20 @@ public class BaseArray implements SmartArray {
     private Object[] elems;
     private String operation;
 
-    public BaseArray(Object[] elems){
+    public BaseArray(Object[] elems) {
         this.elems = elems;
         this.operation = "";
     }
-    public Object[] toArray(){
+
+    public Object[] toArray() {
         return this.elems;
     }
-    public String operationDescription(){
+
+    public String operationDescription() {
         return this.operation;
     }
 
-    public int size(){
+    public int size() {
         return this.elems.length;
     }
 }

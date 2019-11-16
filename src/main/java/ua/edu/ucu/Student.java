@@ -1,6 +1,5 @@
 package ua.edu.ucu;
 
-
 class Student {
 
     private double GPA;
