@@ -7,17 +7,20 @@ public class BaseArray implements SmartArray {
 
     public BaseArray(Object[] elems) {
         this.elems = elems;
-        this.operation = "";
+        this.operation = "Base Array";
     }
 
+    @Override
     public Object[] toArray() {
         return this.elems;
     }
 
+    @Override
     public String operationDescription() {
         return this.operation;
     }
 
+    @Override
     public int size() {
         return this.elems.length;
     }

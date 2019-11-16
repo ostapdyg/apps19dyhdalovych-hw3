@@ -7,7 +7,7 @@ class Student {
     private String name;
     private String surname;
 
-    public Student(String name, String surname, double GPA, int year) {
+    Student(String name, String surname, double GPA, int year) {
         this.GPA = GPA;
         this.year = year;
         this.name = name;
@@ -32,7 +32,22 @@ class Student {
 
     @Override
     public String toString() {
-        return "Student{name=" + name + ", surname=" + surname + ", " + "GPA=" + GPA + ", year=" + year + '}';
+        return "Student{name=" + name + ", surname="
+        + surname + ", " + "GPA=" + GPA + ", year=" + year + '}';
+    }
+
+    @Override
+    public boolean equals(Object other) {
+        Student st = ((Student) other);
+        return (this.getName() == st.getName()) 
+               && (this.getSurname() == st.getSurname())
+               && (this.getYear() == st.getYear()) 
+               && (this.getGPA() == st.getGPA());
+    }
+
+    @Override
+    public int hashCode() {
+        return this.getYear();
     }
 
 }
